@@ -38,23 +38,26 @@ int main()
                 {
                     this_class = num_class[i];
                     chk = true;
+                    break;
                 }
             }
             if(chk)
             {
-                for(i=0; i<row_class.size(); ++i)
+                int row_size = row_class.size();
+                for(i=0; i<row_size; i++)
                 {
                     if(this_class == row_class[i])
                     {
                         check_class = true;
-                        for(j=i; j<row_class.size(); ++j)
+                        int now_size = row_class.size();
+                        for(j=i; j<now_size; j++)
                         {
                             if(this_class != row_class[j])
                             {
                                 temp_class = j;
                                 break;
                             }
-                            if(j == row_class.size()-1)
+                            if(j == row_size-1)
                                 temp_class = j+1;
                         }
                     }
